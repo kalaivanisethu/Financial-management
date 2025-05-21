@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { InvestmentService } from '../core/investment.service';
 import { StoreService } from '../store/store.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-investment-form',
   templateUrl: './investment-form.component.html',
@@ -11,7 +13,8 @@ export class InvestmentFormComponent {
  public investmentForm: FormGroup;
  public reviewMode = false;
  public assetTypes: string[] = ['Stock', 'Bond', 'Mutual Fund', 'Real Estate', 'Gold', 'Crypto'];
-  constructor(private fb: FormBuilder, private storeService: StoreService) {
+  constructor(private fb: FormBuilder, private storeService: StoreService,    private router: Router
+) {
     this.investmentForm = this.fb.group({
       assetType: [this.assetTypes, Validators.required],
       quantity: ['', [Validators.required, Validators.min(1)]],
@@ -34,6 +37,8 @@ export class InvestmentFormComponent {
     this.investmentForm.reset();
     this.reviewMode = false;
     alert('Investment added successfully!');
+    this.router.navigate(['/dashboard']);
+
   }
 //edit the form
   public editForm() {
