@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+span.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+}
+.logo img{
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+.topmenu {
+    border-bottom: 1px solid #e7e7e7;
+    background: #f6f6f6;
+    padding: 6px 10px;
+}
+mat-card.mat-mdc-card.mdc-card {
+    background: #f7f7f7;
+    border: 1px solid #ede2e2bd;
+    border-radius: 20px;
+    align-items: center;
+    padding: 20px;
+}.mat-mdc-card-title, .mat-mdc-card-subtitle {
+    display: block;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #103458;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+    height: 45px;
+    padding: 0;
+}
+mat-error {
+    font-size: 12px;
+    color: red;
+    padding: 0;
+}
+
+.mat-mdc-form-field-infix{
+    padding-top:8px;
+}
+.cdk-overlay-pane{
+margin: auto;background: #fff;}
+
+.mat-mdc-select-arrow{
+    display: none;
+}
